@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: Roboto, Helvetica, sans-serif;
+    background: #F0F7FF;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 960px;
+    margin: 0 auto;
+}
+
+/* --- <HEADER> --- */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 130px;
+    margin: 0 auto;
+}
+
+.header__nav {
+    flex-grow: 1;
+    padding: 0 30px;
+}
+
+.header__login {
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #456C98;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu__item {
+    margin: 0 30px;
+}
+
+.menu__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu__link:hover {
+    color: #000;
+}
+
+.menu__link--active {
+    color: #000;
+}
+/* --- </HEADER>  --- */
+
+/* --- <SEARCH> --- */
+.search {
+    position: relative;
+}
+
+.search__image {
+    width: 100%;
+}
+
+.search__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.search__header {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.search__input {
+    width: 500px;
+    padding: 0 20px;
+    font-size: 26px;
+    line-height: 55px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.search__label {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+/* --- </SEARCH> --- */
+
+/* --- <MAIN> --- */
+.main {
+    margin-top: 60px;
+    padding: 0 230px;
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.subheading {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 18px;
+    margin: 24px 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.recipes {
+    margin-top: 40px;
+}
+
+.recipes__image {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    float: left;
+}
+/* --- </MAIN> --- */
+
+.image {
+    width: 100%;
+}
+
+/* --- <FOOTER> --- */
+.footer {
+    display: flex;
+    padding: 30px 130px;
+    align-items: center;
+}
+
+.footer__copyright {
+    flex-grow: 1;
+    padding: 0 30px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__social-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #456C98;
+    border-radius: 6px;
+}
+
+.footer__social-link + .footer__social-link {
+    margin-left: 10px;
+}
+
+.footer__social-link--insta {
+    background-image: url(assets/insta.png);
+}
+
+.footer__social-link--fb {
+    background-image: url(assets/fb.png);
+}
+
+.footer__social-link--pt {
+    background-image: url(assets/pinterest.png);
+}
+/* --- </FOOTER> --- */

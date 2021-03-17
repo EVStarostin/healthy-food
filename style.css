@@ -6,7 +6,7 @@ body {
 
 .container {
     max-width: 1440px;
-    min-width: 960px;
+    min-width: 1140px;
     margin: 0 auto;
 }
 
@@ -15,30 +15,15 @@ body {
     display: flex;
     align-items: center;
     padding: 0 130px;
-    margin: 0 auto;
 }
 
 .header__nav {
     flex-grow: 1;
-    padding: 0 30px;
-}
-
-.header__login {
-    padding: 5px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    background: #456C98;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    white-space: nowrap;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    padding: 0;
 }
 
 .menu__item {
@@ -46,21 +31,47 @@ body {
 }
 
 .menu__link {
+    position: relative;
     font-size: 18px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
     white-space: nowrap;
 }
 
 .menu__link:hover {
-    color: #000;
+    color: #456C98;
 }
 
 .menu__link--active {
     color: #000;
 }
-/* --- </HEADER>  --- */
+
+.menu__link--active::before {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #456C98;
+    transform: translateX(-50%);
+}
+
+.header__login {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 20px;
+    background: #456C98;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+/* --- </HEADER> --- */
 
 /* --- <SEARCH> --- */
 .search {
@@ -79,20 +90,28 @@ body {
     text-align: center;
 }
 
-.search__header {
-    font-size: 60px;
-    font-weight: 700;
+.headline {
     margin: 15px 0;
+    font-family: Optima, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    color: #1E2D3E;
+}
+
+.search__bar {
+    position: relative;
+    background: url(assets/vector.svg) no-repeat 15px center;
 }
 
 .search__input {
     width: 500px;
-    padding: 0 20px;
-    font-size: 26px;
+    padding: 0 20px 0 50px;
+    font-size: 22px;
     line-height: 55px;
-    border: 0;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border: 0;
+    border-radius: 5px;
 }
 
 .search__label {
@@ -110,78 +129,85 @@ body {
 }
 
 .heading {
+    margin: 20px 0;
+    font-family: Optima, Helvetica, sans-serif;;
     font-weight: 700;
-    font-size: 30px;
-}
-
-.subheading {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 48px;
 }
 
 .text {
+    margin: 20px 0;
     font-size: 18px;
-    margin: 24px 0;
+}
+
+.about {
+    max-width: 800px;
+}
+
+.recipes {
+    margin-top: 50px;
+}
+
+.recipes__image {
+    float: left;
+    width: calc(50% - 10px);
+    margin-right: 20px;
 }
 
 .inline {
     display: inline;
 }
-
-.recipes {
-    margin-top: 40px;
-}
-
-.recipes__image {
-    width: calc(50% - 10px);
-    margin-right: 20px;
-    float: left;
-}
 /* --- </MAIN> --- */
 
 .image {
+    position: relative;
     width: 100%;
+    margin-top: -100px;
+    z-index: -1;
 }
 
 /* --- <FOOTER> --- */
 .footer {
     display: flex;
-    padding: 30px 130px;
     align-items: center;
-}
+    padding: 0 130px;
+}  
 
 .footer__copyright {
     flex-grow: 1;
-    padding: 0 30px;
-    font-size: 14px;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.5);
+    margin-left: 30px;
 }
 
 .footer__socials {
     display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
 }
 
-.footer__social-link {
+.footer__socials-link {
     display: block;
     width: 40px;
     height: 40px;
-    background: #456C98;
-    border-radius: 6px;
+    border-radius: 5px;
+    font-size: 0;
 }
 
-.footer__social-link + .footer__social-link {
-    margin-left: 10px;
+.footer__socials-item + .footer__socials-item {
+    margin-left: 17px;
 }
 
-.footer__social-link--insta {
-    background-image: url(assets/insta.png);
+.footer__socials-link--insta {
+    background: url(assets/insta.png);
 }
 
-.footer__social-link--fb {
-    background-image: url(assets/fb.png);
+.footer__socials-link--fb {
+    background: url(assets/fb.png);
 }
 
-.footer__social-link--pt {
-    background-image: url(assets/pinterest.png);
+.footer__socials-link--pt {
+    background: url(assets/pinterest.png);
 }
 /* --- </FOOTER> --- */
